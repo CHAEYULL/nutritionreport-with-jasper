@@ -8,6 +8,7 @@ import java.util.Map;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.whizpath.nutritionreport.nutritionreport.model.MacroNutrient;
 import com.whizpath.nutritionreport.nutritionreport.model.Nutrition;
 
 import net.sf.jasperreports.engine.JREmptyDataSource;
@@ -24,7 +25,7 @@ public class NutritionreportApplication {
 
 	public static void main(String[] args) throws JRException{
 		SpringApplication.run(NutritionreportApplication.class, args);
-		String filePath = "C:\\CR-R\\Spring\\nutritionreport\\src\\main\\resources\\templates\\nutritionreport.jrxml";
+		String filePath = "/Users/fergus/Documents/CR-Project/Spring/nutritionreport-with-jasper/src/main/resources/templates/nutritionreport.jrxml";
 
 		Nutrition protein = new Nutrition("Protein", 62, 83, "g");
 		Nutrition carbonhydrates = new Nutrition("Protein", 62, 83, "g");
@@ -69,16 +70,28 @@ public class NutritionreportApplication {
 		nutritionList.add(coffeemilk);
 		nutritionList.add(juice);
 
+		MacroNutrient carbMacroNutrient = new MacroNutrient("Crabohydrates", 48);
+		MacroNutrient fatMacroNutrient = new MacroNutrient("Fat", 32);
+		MacroNutrient proteinMacroNutrient = new MacroNutrient("Protein", 20);
+
+		List<MacroNutrient> macroNutrientList = new ArrayList<>();
+		macroNutrientList.add(carbMacroNutrient);
+		macroNutrientList.add(fatMacroNutrient);
+		macroNutrientList.add(proteinMacroNutrient);
+
+
+		JRBeanCollectionDataSource macroNutrientDataSource = new JRBeanCollectionDataSource(macroNutrientList);
 		JRBeanCollectionDataSource nutritionDataSource = new JRBeanCollectionDataSource(nutritionList);
 
 		Map<String, Object> parametaters = new HashMap<>(); 
 		parametaters.put("firstName", "John");
 		parametaters.put("dob", "07/09/2020");
 		parametaters.put("age", 20);
-		parametaters.put("nutritionDataSet", nutritionDataSource);
+		parametaters.put("nutrtitionDataSet", nutritionDataSource);
+		parametaters.put("macroNutrientDataSource", macroNutrientDataSource);
 		JasperReport report = JasperCompileManager.compileReport(filePath);
 		JasperPrint print = JasperFillManager.fillReport(report, parametaters, new JREmptyDataSource());
-		JasperExportManager.exportReportToPdfFile(print,"C:\\CR-R\\Spring\\nutritionreport\\src\\main\\resources\\static\\nutritionreport.pdf" );
+		JasperExportManager.exportReportToPdfFile(print,"/Users/fergus/Documents/CR-Project/Spring/nutritionreport-with-jasper/src/main/resources/static/nutritionreport.pdf" );
 		System.out.println("pdf 저장됨");
 		
 	}
