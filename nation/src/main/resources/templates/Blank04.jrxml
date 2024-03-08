@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank04" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9066fa23-3878-463d-8360-3519bb026c22">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="enactRevisionDataSet" uuid="e9d15b57-a2ca-49b4-b344-ce15e54d616c">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="revisionNum" class="java.lang.Float"/>
+		<field name="revisionContents" class="java.lang.String"/>
+		<field name="write" class="java.lang.String"/>
+		<field name="sign" class="java.lang.String"/>
+		<field name="date" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="enactRevisionHistory" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="415" splitType="Stretch">
+			<frame>
+				<reportElement x="1" y="0" width="800" height="53" uuid="caaa42b2-4a10-4eef-89a0-3f24caa1e0a9"/>
+				<rectangle>
+					<reportElement x="0" y="50" width="800" height="1" uuid="05742f69-0dbc-4478-b8a9-79bfa0ceab65"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="39" width="800" height="9" backcolor="#030303" uuid="081e7e83-0bd9-4fcd-8cf9-77ed1d343bac"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="1" y="0" width="129" height="20" uuid="c4f1d23f-f6af-4b9b-bae9-98dfc94ced9f"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[국방통합재난관리정보체계(체계개발)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="20" width="130" height="19" uuid="95e6fb69-0144-4d78-8374-cedef141fe41"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="9"/>
+					</textElement>
+					<text><![CDATA[AV-1 아키텍처 개요 및 요약정보]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="740" y="20" width="60" height="20" uuid="29cda19d-e784-414a-acb4-f2370d584103"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[MIND-AF v1.5]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="310" width="800" height="23" uuid="16d0470c-47cd-4946-9013-77b382d26552"/>
+				<rectangle>
+					<reportElement x="0" y="13" width="800" height="1" uuid="efb8840e-e99a-4477-96ce-8ada4ff33eb8"/>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="0" width="800" height="9" backcolor="#030303" uuid="2f7947b6-91ef-433e-8376-036f642df9d4"/>
+				</rectangle>
+			</frame>
+			<componentElement>
+				<reportElement x="50" y="80" width="700" height="60" uuid="98b0845d-2ccd-4762-a90b-afdd15412208">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="enactRevisionDataSet" uuid="e8e5d04a-20d2-4bd9-bafe-cdaddbffbdd0">
+						<dataSourceExpression><![CDATA[$P{enactRevisionHistory}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="70" uuid="3ba9dcd7-ae57-452e-9e02-598d501cdf24">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="904f9f9b-0dc2-4dc7-b402-8620b7842664"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif"/>
+								</textElement>
+								<text><![CDATA[개 정 번 호]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="6f9b8f49-f506-4b38-871b-a2895b265ae6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{revisionNum}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="330" uuid="fece4d97-d692-4233-bd90-5d847042f562">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="330" height="30" uuid="7530ddd0-6394-4616-b1c6-2a6951ebd44f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif"/>
+								</textElement>
+								<text><![CDATA[개  정  내  용]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="330" height="30" uuid="80d44c9a-29c2-446e-9b0d-ac0c724cae51"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{revisionContents}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="05ef55ee-26f1-48c4-9df2-c0e2e9916c16">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="7e48f394-cbcd-4297-b482-d5295302649c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif"/>
+								</textElement>
+								<text><![CDATA[작  성]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="d4dc4777-5ae8-469a-994c-06099c9ca089"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{write}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="2dd92da2-dd78-4573-911e-75a76c5a0761">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="b51c9fea-f888-471b-9718-2b8d81d99266"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif"/>
+								</textElement>
+								<text><![CDATA[승  인]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="a057194b-83ec-4f30-a95f-0c5c006cce55"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{sign}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="e978f0de-f642-43d0-925b-acd3a11e8c36">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30" uuid="9d37b5e7-4467-4b42-8425-f1c2a2d0f306"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif"/>
+								</textElement>
+								<text><![CDATA[재  -개정  일자]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="30" uuid="58a3bd11-4a8f-4510-859a-65fb123d649b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>
